@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
+
+/* --- GX FONTS ––– */
+@font-face {
+    font-family: 'Gt-Flexa-Mono';
+    src: url("fonts/GT-Flexa-Mono-Trial-VF.woff2") format("woff2-variations");
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.letter {
+    /*  weight range is 100 to 800 */
+    /* italique range is from 0 to 100 */
+    font-family: 'Gt-Flexa-Mono', sans-serif;
+    font-variation-settings: "wdth" 0, "wght" 100, "ital" 100;
+    
+    
+    font-size: 10vw;
+    /*line-height: 100%;
+    cursor: pointer;
+    transition: all 0.5s;*/
+}
+
+div.letter{
+    /*animation: letteranim 2s ease-in-out infinite;*/
+    animation-name: letteranim;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.74,-0.56,.25,1.43);
+    animation-iteration-count: infinite;
+    font-size: 6vw;
+   
+}
+
+
+@keyframes letteranim {
+    0% {
+        font-variation-settings: "wdth" 100, "wght" 200, "ital" 100;
+    }
+
+    50% {
+        font-variation-settings: "wdth" 100, "wght" 800, "ital" 0;
+    }
+
+    100% {
+        font-variation-settings: "wdth" 100, "wght" 200, "ital" 100;
+    }
+}
+
+.container {
+    position: relative;
+  }
+  
+.cursor {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 9999;
+}
+  
+
+  body .cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+    border-radius: 50%;
+   
+   
+    
+}
+
+body .cursor__ball--big {
+    fill: rgb(3, 241, 193);
+    mix-blend-mode: difference;
+    opacity: 0.8;
+}
+

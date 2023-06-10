@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .letter{
+            letter-spacing:-0.1em;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div>
+       
+        <span class="letter">U</span>
+        <span class="letter">n</span>
+        <span class="letter">k</span>
+        <span class="letter">n</span>
+        <span class="letter">o</span>
+        <span class="letter">w</span>
+        <span class="letter">n</span>
+
+        <div class="cursor">
+            <div class="cursor__ball cursor__ball--big ">
+                <svg height="60" width="60">
+                    <circle cx="30" cy="30" r="20" stroke-width="0"></circle>
+                </svg>
+            </div>
+          
+        </div>
+    </div>
+
+
+
+   
+
+    <script>
+        const elements = document.getElementsByClassName('letter');
+
+        for (let i = 0; i < elements.length; i++) {
+            //get position
+            const bounds = elements[i].getBoundingClientRect();
+
+            elements[i].setAttribute("top", Math.floor(bounds.y));
+            elements[i].setAttribute("left", Math.floor(bounds.x));
+
+            //get styles 
+            const computedStyles = window.getComputedStyle(elements[i]);
+
+            // Get the value of font-variation-settings property
+            const fontVariationSettings = computedStyles.getPropertyValue('font-variation-settings');
+
+            // Split the font-variation-settings value into individual settings
+            const settings = fontVariationSettings.split(',');
+
+
+
+            let n = 0;
+            // Iterate over the settings and extract the property-value pairs
+            settings.forEach(setting => {
+                let [property, value] = setting.trim().split(' ');
+                elements[i].setAttribute("val" + n, value);
+                //console.log(property) ital, wdth, wght
+                n++;
+
+            });
+
+
+        }
+
+        let mouse = { x: 0, y: 0 };
+        const cursorBig = document.querySelector('.cursor__ball--big');
+       
+        document.addEventListener('mousemove', (event) => {
+            mouse = { x: event.clientX, y: event.clientY };
+           
+            cursorBig.style.top = (event.clientY - 30)+ 'px';
+            cursorBig.style.left = (event.clientX -30)+ 'px';
+          
+        });
+
+        let distanz = 300;
+
+        function distance(a, b) {
+            var aa = a.x - b.x;
+            var bb = a.y - b.y;
+            return Math.sqrt(aa * aa + bb * bb);
+        }
+
+        function norm(d, distanz) {
+            return (d / distanz);
+        }
+
+
+        function loop() {
+
+            for (let i = 0; i < elements.length; i++) {
+                const el = elements[i];
+                const d = distance(mouse, { x: el.getAttribute("left"), y: el.getAttribute("top") });
+                if (d < distanz) {
+                    let factor = norm(d, distanz);
+                    //weight von 100 bis 800
+                    const wght = parseInt(el.getAttribute("val2")) * (8 * (1 - factor));
+                    //width von 0 bis 200
+                    const wdth = parseInt(el.getAttribute("val1") + 1) * (200 * (1 - factor));
+                    elements[i].style.fontVariationSettings = "'wdth' 0,'wght' " + Math.floor(wght);
+                } else {
+                    elements[i].style["font-variation-settings"] = "'wdth' -20,'wght' 100";
+                }
+
+
+
+
+            }
+
+            requestAnimationFrame(loop);
+        }
+        loop();
+
+
+
+    </script>
+</body>
+
+</html>
