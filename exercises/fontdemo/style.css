@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Gt-Flexa";
+    src: url("fonts/GT-Flexa-Mono-Trial-VF.woff2");
+}
+
+body{
+    min-height: 300vh;
+}
+.letter{
+    font-family: "Gt-Flexa";
+    font-size: 8rem;
+    font-variation-settings: "wdth" 0, "wght" 800, "ital" 100;
+    /*animation-name: letteranimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;*/
+
+    /*animation: letteranimation 5s ease-in-out infinite;*/
+
+    
+
+
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    min-width: 100vw;
+    position: fixed;
+    top:0px;
+}
+
+@keyframes letteranimation {
+    0%{
+        font-variation-settings: "wdth" 0, "wght" 100, "ital" 0;
+    }
+    50%{
+        font-variation-settings: "wdth" 0, "wght" 800, "ital" 0;
+    }
+    100%{
+        font-variation-settings: "wdth" 0, "wght" 100, "ital" 0;
+    }
+}

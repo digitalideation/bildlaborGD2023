@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="../prism/hack.css">
+  <link rel="stylesheet" type="text/css" href="../prism/prism.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+  <script src="../prism/prism.js"></script>
+<pre>
+  <code class="language-javascript">
+let img;
+let posX=0;
+
+let shiftX=0;
+
+function preload(){
+      img=loadImage("assets/cindy-small.jpg");
+}
+
+function setup() {
+  createCanvas(img.width, img.height);
+
+  //colWidth=round(width/cols);
+  //image(img, 0,0);
+}
+
+function draw() {
+  posX=0;
+
+  while(posX < width){
+    let angle=map((posX + shiftX)%width, 0, width, 0, 180);
+    let f=sin(radians(angle)); //wert zwischen 0 und 1
+    let colWidth = map(f, 0,1, 1, 40);
+
+    posX+=colWidth;  //posX = posX+colWidth;
+
+
+
+    push();
+    translate(posX, 0);
+    scale(-1,1);
+    copy(img, posX, 0, colWidth, height, 0, 0, colWidth, height);
+    //line(i*colWidth, 0, i*colWidth, height);
+    pop();
+  }
+
+  shiftX++;
+}
+</code>
+</pre>
+</body>
+
+</html>
