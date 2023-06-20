@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Gt-Flexa";
+    src: url("../assets/fonts/GT-Flexa-Mono-Trial-VF.woff2");
+}
+
+body {
+    min-height: 300vh;
+}
+
+.letter {
+    font-family: "Gt-Flexa";
+    font-size: 8rem;
+    font-variation-settings: "wdth" 0, "wght" 800, "ital" 0;
+    /* animation-name: letteranimation;
+    /* animation-duration: 3s;
+    /* wie die Übergänge gerechnet werden, z.B. linear -> cubic-bezier.com */
+    animation-timing-function: ease-in-out;
+    /* wie oft soll die Animatin laufen */
+    animation-iteration-count: infinite;
+    /* Kurzschreibweise:
+    animation: letteranimation 5s ease-in-out infinite; */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0px;
+}
+
+
+/* @keyframes letteranimation {
+    0% {
+        font-variation-settings: "wdth" 5, "wght" 100, "ital" 0;
+    }
+    50% {
+        font-variation-settings: "wdth" 0, "wght" 800, "ital" 10;
+    }
+    100% {
+        font-variation-settings: "wdth" 5, "wght" 100, "ital" 0;
+    }
+} */
+
+
+/* .delay1 {
+    animation-delay: -2s;
+}
+
+.delay2 {
+    animation-delay: -3s;
+} */
