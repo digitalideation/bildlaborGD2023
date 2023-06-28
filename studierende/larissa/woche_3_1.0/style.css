@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "KKl-Narrow";
+    src: url("/fonts/KKL-Narrow.woff2");
+}
+
+.zoom-container {
+    width: 100vw;
+    height: 100vh;
+    perspective: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.room {
+    width: 1000px;
+    height: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: turn 5s linear infinite;
+}
+
+.wall {
+    width: 1000px;
+    height: 1000px;
+    background: #000000;
+    border: 10px solid white;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.wall-front {
+    transform: translateZ(400px);
+}
+
+.wall-back {
+    transform: translateZ(-400px);
+}
+
+.wall-left {
+    transform: translateX(-400px) rotateY(-90deg);
+}
+
+.wall-right {
+    transform: translateX(400px) rotateY(90deg);
+}
+
+.wall-ceiling {
+    transform: translateY(-400px) rotateX(90deg);
+}
+
+.wall-floor {
+    transform: translateY(400px) rotateX(-90deg);
+}
+
+.typography-glitch {
+    font-family: "KKL-Narrow";
+    font-size: 500px;
+    color: white;
+    transform: translateY(200px) rotateX(0deg);
+}
+
+@keyframes turn {
+    from {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    to {
+        transform: rotate3d(1, 1, 0, 45deg);
+    }
+}
