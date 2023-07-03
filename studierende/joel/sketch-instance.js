@@ -17,14 +17,15 @@ var s1 = function (sketch, canvas) {
   sketch.setup = function () {
     var f4Width = 895;
     var f4Height = 1280;
-    let canv = sketch.createCanvas(f4Width, f4Height);
+    var factor=sketch.windowHeight / f4Height;
+    let canv = sketch.createCanvas(f4Width*factor, sketch.windowHeight);
     canv.parent(placeholder);
     sketch.frameRate(1);
     //sketch.noLoop();
     sketch.pixelDensity(1);
     sketch.rectMode(sketch.CENTER);
     sketch.imageMode(sketch.CENTER);
-    sketch.farben = ['rgb(255, 170, 0)', 'rgb(243, 255, 0)']
+    farben = ['rgb(255, 170, 0)', 'rgb(243, 255, 0)']
 
   }
 
@@ -88,3 +89,4 @@ var s1 = function (sketch, canvas) {
 }
 
 let p5One = new p5(s1, "sketch-one");
+let p5Two = new p5(s1, "sketch-two");
