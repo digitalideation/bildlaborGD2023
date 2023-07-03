@@ -36,11 +36,16 @@ function setup() {
 }
 
 function draw() {  
+  let mX = constrain(mouseX, 0, width);
+	let mY = constrain(mouseY, 0, height);
+
   // shader() sets the active shader with our shader
   shader(camShader);
 
   // lets just send the cam to our shader as a uniform
   camShader.setUniform('tex0', myImg);
+
+  camShader.setUniform('iMouse', [mX, mY]);
 
   // send a slow frameCount to the shader as a time variable
   camShader.setUniform('time', frameCount * 0.01);

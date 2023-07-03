@@ -8,6 +8,8 @@ uniform sampler2D tex0;
 uniform float time;
 uniform float frequency;
 uniform float amplitude;
+uniform vec3 iMouse;		// mouse pixel coords. xy: current, zw: click
+
 
 void main() {
 
@@ -23,7 +25,7 @@ void main() {
   // lastly multiply the whole thing by amplitude -- amplitude controls how tall the hills and valleys are, in this case it will be how much to distort the image
   // *try changing uv.y to uv.x and see what happens
   float sineWaveX = sin(uv.x * frequency + time) * amplitude;
-  float sineWaveY = sin(uv.y * frequency + time) * sineWaveX;
+  float sineWaveY = sin(uv.y * frequency + time) * iMouse.y * 0.0005;
 
   // create a vec2 with our sine
   // what happens if you put sineWave in the y slot? in Both slots?
