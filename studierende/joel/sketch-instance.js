@@ -6,10 +6,11 @@ let farben= [];
 let placeholder=canvas;
 
 sketch.preload = function() {
-  for (let i = 1; i < sketch.anzahlBilder; i++) {
-    sketch.images[i] = sketch.loadImage("Bilder/" + i + ".png");
+  for (let i = 1; i < anzahlBilder; i++) {
+    images[i] = sketch.loadImage("Bilder/" + i + ".png");
   
   }
+ 
 }
 
 
@@ -17,7 +18,7 @@ sketch.setup = function() {
   var f4Width = 895;  
   var f4Height = 1280;  
   let canv= sketch.createCanvas(f4Width, f4Height);
-  canv.parent(sketch.placeholder);
+  canv.parent(placeholder);
   sketch.frameRate(1);
   //sketch.noLoop();
   sketch.pixelDensity(1);
@@ -29,10 +30,11 @@ sketch.setup = function() {
 
 
 sketch.draw = function() {
-  //background(255);
+  //sketch.background(255, 0,0);
    //let textContent = "Hallo, hier ist der Text!";
    let x = sketch.width / 2; 
    sketch.blendMode(sketch.SOFT_LIGHT);
+   
   for (let i = 1; i < images.length; i++) {
     let img = images[i];
     let x = sketch.random(sketch.width);
