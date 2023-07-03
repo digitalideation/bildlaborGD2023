@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketch</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+  <audio  id="myAudio" controls autoplay loop src="creepy6.mp3"></audio>
+
+  <script>
+    // Assuming you have an audio element with id 'myAudio'
+    const audio = document.getElementById('myAudio');
+
+    
+
+
+    let previousScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollSpeed = 0;
+
+    window.addEventListener('scroll', handleScroll);
+
+    function handleScroll() {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollDistance = currentScrollTop - previousScrollTop;
+
+      // Calculate the scroll speed based on the scroll distance
+      scrollSpeed = Math.abs(scrollDistance);
+
+      previousScrollTop = currentScrollTop;
+
+      // Normalize the scroll speed between 0 and 1
+      const maxScrollSpeed = 100; // Adjust this value based on your preference
+      const normalizedScrollSpeed = Math.min(scrollSpeed / maxScrollSpeed, 1);
+
+      // Use the normalized scroll speed value as needed
+      console.log('Normalized Scroll Speed:', (normalizedScrollSpeed+1));
+   
+      audio.playbackRate = (normalizedScrollSpeed+1);
+    }
+
+  </script>
+</body>
+
+</html>

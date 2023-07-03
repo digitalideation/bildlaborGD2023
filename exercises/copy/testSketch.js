@@ -2,7 +2,7 @@
 let canvas;
 
 function preload() {
-  img = loadImage("assets/cindy-small.jpg");
+  img = loadImage("assets/IMG_0541.jpg");
 }
 
 function setup() {

@@ -6,7 +6,7 @@ let col=0;
 let a=0;
 
 function preload(){
-    img=loadImage("assets/cindy-small.jpg");
+    img=loadImage("assets/IMG_0541.jpg");
     
 }
 

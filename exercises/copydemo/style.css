@@ -5,10 +5,13 @@ html, body {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: stretch;
+  min-height:300vh;
 }
 
 canvas {
   display: block;
+  position: fixed;
+  top:0px;
 }
 
 
