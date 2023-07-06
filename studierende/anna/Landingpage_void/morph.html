@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What I see</title>
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="libraries/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="style_override.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ipl8htp.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <div id="dot"></div>
+    
+<!-- BILD -->
+
+<div class="zoom">  
+  <video id="Video" width="640" height="360">
+    <source src="assets/animation/morph.mp4" type="video/mp4">
+  </video>
+</div>
+  
+<!-- INFO -->
+    <div class="top-right">
+      <h3 class="fade" id="tooltipContainer3">save</h3>
+      <span id="tooltipText3">SAVE CANVAS BY PRESSING «S»</span>
+      
+      <a href="index.html">
+        <h3 class="fade">VOID</h3>
+      </a>
+      
+      <a href="info.html">
+      <h3 class="fade">Info</h3>
+     </a>
+    </div>
+
+<!-- NAVIAGTION -->
+
+<div class="bottom-left" id="tooltipContainer">
+      <a href="morph.html">
+      <h3 class="active"> > What I see</h3>
+      <h3 class="zitat active">«They put in everything they know, rather than only what they see.»</h3>
+    </a>
+  
+    <a href="edge_only.html">
+      <h3 class="fade"> > What the Computer sees</h3>
+      <!-- <h3>«This gives me an opportunity to concentrate better on its form – to interpret its
+        structures and to learn more from what I can actually see.»</h3> -->
+    </a>
+    <!-- <span id="tooltipText1">EXPLORE</span> -->
+
+    <a href="detection.html">
+      <h3 class="fade"> > Together we see</h3>
+    
+    </a>
+  </div>
+</div>
+
+
+<!-- TITEL -->
+    <div id="tooltipContainer2" class="top-left">
+      <h3 class="fade" id="audio1">THE INFORMATION OF VOID</h3>
+       <span id="tooltipText2">PRESS «P» TO PLAY AND PAUSE AUDIO</span>
+    </div>
+
+
+    <script src="assets/scripts/sketch.js"></script>
+    <script src="assets/scripts/audio1.js"></script>
+    <script src="assets/scripts/cursor1.js"></script>
+  </body>
+</html>

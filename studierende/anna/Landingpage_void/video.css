@@ -1,0 +1,92 @@
+@font-face {
+    font-family: suisse mono;
+    src: url(assets/fonts/SuisseEDUIntlMono-Regular-WebS.woff2);
+  }
+  
+
+  * {
+    cursor: none !important;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    }
+  
+    body {
+      cursor: none; 
+    }
+  
+    a {
+      cursor: default;
+    }
+
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  
+#video-background {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  filter: blur(25px); /* video weichzeichnen*/
+}
+  
+
+
+h1 {
+    font-family: suisse mono;
+    font-size: 1rem;
+    color: rgb(121, 121, 121);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+
+  
+  #fading-text {
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    /* opacity: 0; */
+    /* transition: opacity 1s ease-in-out; */
+  }
+
+
+  #dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    transition: background-color 0.5s;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+
+  .fade {
+    transition: color 1s;
+  }
+  
+  .fade:hover {
+    color: #1386c8;
+  }
+  
+  .fade:focus,
+  .fade:active {
+    color: black;
+    transition: none;
+  } 
