@@ -38,6 +38,8 @@ function setup() {
 function draw() {  
   let mX = constrain(mouseX, 0, width);
 	let mY = constrain(mouseY, 0, height);
+  mX = abs(width/2 - mX);
+  mY = abs(height/2 - mY);
 
   // shader() sets the active shader with our shader
   shader(camShader);

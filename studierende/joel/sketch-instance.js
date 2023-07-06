@@ -31,7 +31,7 @@ var s1 = function (sketch, canvas) {
 
 
   sketch.draw = function () {
-    //sketch.background(255, 0,0);
+    //sketch.background(255);
     //let textContent = "Hallo, hier ist der Text!";
     let x = sketch.width / 2;
     sketch.blendMode(sketch.SOFT_LIGHT);
