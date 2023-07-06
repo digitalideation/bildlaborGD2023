@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+    <script src="sketch.js"></script>
+
+    <div id="textbox">
+        <audio id="myAudio">
+            <source src="assets/16.mp3" type="audio/mp3">
+          </audio>
+        <div class="sound center" onclick="playSound(); hideButton()">
+            <p id="soundtext">sound is an essential to this project.<br>click <u>here</u> to activate it.</p>
+        </div>
+        <div class="abstandklein"></div>
+        <p class="center akzidenz">I am an image</p>
+        <div class="abstand"></div>
+        <p class="center akzidenz">a filled frame</p>
+        <div class="abstand"></div>
+        <p class="left akzidenz">an alignment of pixels / light and shadow / a projection </p>
+        <div class="abstand"></div>
+        <p class="right akzidenz">some bits of data / noise / a compression</p>
+        <div class="abstand"></div>
+        <p class="center akzidenz">a copy<br>a memory<br>a story</p>
+        <div class="abstand"></div>
+        <p class="center akzidenz">interpretable</p>
+        <div class="abstand"></div>
+        <p class="right akzidenz">a fraction of time / pure information / frequencies and amplitudes</p>
+        <div class="abstand"></div>
+        <p class="left akzidenz">a point of view</p>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function playSound() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+
+    function pauseSound() {
+        var audio = document.getElementById("myAudio");
+        audio.pause();
+    }
+
+    function hideButton() {
+        var textbox = document.getElementById("soundtext")
+        textbox.classList.add("hidden");
+    }
+</script>
