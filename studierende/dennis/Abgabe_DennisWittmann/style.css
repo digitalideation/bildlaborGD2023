@@ -1,0 +1,17 @@
+html, body {
+  background-color: rgb(255, 255, 255);
+  height: 1000vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 100px;
+  font-weight: lighter;
+
+  color: rgb(255, 255, 255);
+ 
+}
+
+canvas {
+  display: block;
+}
