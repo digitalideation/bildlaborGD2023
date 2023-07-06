@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prozess</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="libraries/p5.gui.js"></script>
+    <script src="libraries/quicksettings.js"></script>
+</head>
+
+<body style="background-color: rgb(50, 50, 50);">
+
+
+    <nav>
+
+        <div class="button_container">
+            <div class="button_container">
+                <div><button id="prozess"><a href="index.html">Generieren</a></button></div>
+                <div><button id="about"><a href="about.html">About</a></button></div>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+        <!-- <h2 class="heading-text"><span>Wie sah mein Weg zu den </span>«Noise Artifacts»<span> aus?</span></h2> -->
+        <div class="image-gallery">
+            <div class="row">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.24.30.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.24.43.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.24.53.png" alt="" />
+
+                </div>
+
+            </div>
+            <!-- <div class="row">
+             
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.25.04.png" alt="" />
+                    <div class="overlay"><span>Image title</span></div>
+                </div>
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.25.14.png" alt="" />
+                    <div class="overlay"><span>Image title</span></div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.19.14.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.19.22.png" alt="" />
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.36.54.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.37.29.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.38.15.png" alt="" />
+
+                </div>
+                <!-- <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.37.03.png" alt="" />
+                    <div class="overlay"><span>Image title</span></div>
+                </div> -->
+            </div>
+            <div class="column">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.37.40.png" alt="" />
+                    <!-- <div class="overlay"><span>Image title</span></div> -->
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.25.32.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.25.53.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.19.51.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.20.13.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.20.39.png" alt="" />
+
+                </div>
+            </div>
+
+
+            <div class="column">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.19.43.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.20.33.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.03.11.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.27.06.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.27.41.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.28.31.png" alt="" />
+
+                </div>
+            </div>
+
+
+
+
+            <div class="column">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.29.56.png" alt="" />
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.12.16.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.17.37.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.11.22.png" alt="" />
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.29.14.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.26.24.png" alt="" />
+
+                </div>
+            </div>
+
+            <div class="row">
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 21.18.26.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 21.38.46.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 22.04.48.png" alt="" />
+
+                </div>
+
+            </div>
+
+
+            <div class="column">
+                <div class="image-item">
+                    <img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 10.01.15.png" alt=" " />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-19 um 20.31.08.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 11.38.53.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 21.21.04.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 21.20.05.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 21.20.25.png" alt="" />
+
+                </div>
+
+            </div>
+            <div class="row">
+
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 14.21.13.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 14.21.01.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-26 um 17.46.59.png" alt=" " />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-26 um 17.57.35.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-26 um 18.00.39.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-26 um 18.00.49.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 11.36.30.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 11.36.50.png" alt="" />
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-19 um 20.33.16.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-19 um 20.42.19.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-19 um 20.45.33.png" alt="" />
+
+                </div>
+
+            </div>
+            <div class="row">
+
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 22.07.46.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 22.12.59.png" alt="" />
+
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 13.47.01.png" alt=" " />
+
+                </div>
+
+            </div>
+            <div class="row">
+
+
+                <!-- <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 13.38.42.png" alt="" />
+                    <div class="overlay"><span>Image title</span></div>
+                </div> -->
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 13.52.35.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 13.47.35.png" alt="" />
+
+                </div>
+
+            </div>
+            <div class="row">
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 14.05.27.png" alt="" />
+
+                </div>
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 13.59.12.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-20 um 14.22.54.png" alt="" />
+
+                </div>
+
+            </div>
+            <div class="row">
+
+
+
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-07-01 um 17.57.35.png" alt="" />
+
+                </div>
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-07-03 um 17.15.00.png" alt="" />
+
+                </div>
+
+
+            </div>
+
+            <div class="column">
+                <div class="image-item">
+                    <img src="assets/add/Bildschirmfoto 2023-06-14 um 21.19.30.png" alt=" " />
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- <ul class="image_container ">
+
+        <li class="image_item "><img src="assets/prozess/Bildschirmfoto 2023-06-14 um 14.21.13.png "></li>
+        <li class="image_item "><img src="assets/prozess/Bildschirmfoto 2023-06-14 um 14.24.02.png "></li>
+        <li class="image_item "><img src="assets/prozess/Bildschirmfoto 2023-06-14 um 14.24.47.png "></li>
+        <li class="image_item "><img src="assets/prozess/Bildschirmfoto 2023-06-14 um 21.20.05.png "></li>
+        <li class="image_item "><img src="assets/prozess/Bildschirmfoto 2023-06-20 um 11.36.19.png "></li>
+        <li class="image_item "><img src="assets/prozess/Bildschirmfoto 2023-06-20 um 11.36.12.png "></li>
+        <li class="image_item "><img src="assets/prozess/Bildschirmfoto 2023-06-14 um 21.21.04.png "></li>
+
+        <li class="image_item "><img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.14.41.png "></li>
+        <li class="image_item "><img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.15.03.png "></li>
+        <li class="image_item "><img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.15.15.png "></li>
+        <li class="image_item "><img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.19.14.png "></li>
+        <li class="image_item "><img src="assets/prozess_aktuell/Bildschirmfoto 2023-07-05 um 09.19.22.png "></li>
+
+
+
+
+
+
+    </ul>
+ -->
+
+
+
+</body>
+
+</html>
