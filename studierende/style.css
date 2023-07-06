@@ -1,0 +1,120 @@
+body {
+    background-image: url("/scan0016.jpg");
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+h1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0%;
+    margin-bottom: 15px;
+    color: #D6D8D9;
+    font-size: 130px;
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 91%;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin: 0%;
+    vertical-align: top;
+    color: #D6D8D9;
+    font-size: 22px;
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 400px;
+    height: 57.183px;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+h3 {
+    margin: 0%;
+    margin-bottom: 30px;
+    vertical-align: top;
+    color: #E1E0E1;
+    font-size: 22px;
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    margin-left: 80px;
+}
+
+li {
+    color: #E1E0E1;
+    border-radius: 100px;
+    border: 2px solid #E1E0E1;
+    display: inline-block;
+    list-style: none;
+    vertical-align: middle;
+    padding: 10px 15px;
+    align-items: flex-start;
+    font-size: 28px;
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    justify-content: space-between;
+}
+
+ul {
+   padding: 0%;
+   margin-top: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: #E1E0E1;
+}
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+  }
+  
+
+  li:hover {
+    border-radius: 985.385px;
+    border: 1.971px solid #E1E0E1;
+    background: #FFF;
+  }
+
+  a:hover {
+    color: #000;
+  }
+
+  li:active {
+    border-radius: 985.385px;
+    border: 1.971px solid #E1E0E1;
+    background: #FFF;
+  }
+
+  #canvas1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
