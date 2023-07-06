@@ -1,0 +1,81 @@
+/*https://www.youtube.com/watch?v=ECTIE39k-_0*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eff0f4;
+}
+
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0px;
+    /*gap: 40px 60px;*/
+}
+
+
+.container .drop {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05),
+    25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container .drop:nth-child(1){
+    border-radius: 57% 43% 43% 57% / 43% 43% 57% 57%;
+}
+.container .drop:nth-child(2){
+    border-radius: 73% 27% 59% 41% / 57% 59% 41% 43%;
+}
+.container .drop:nth-child(3){
+    border-radius: 39% 61% 75% 25% / 30% 58% 42% 70%; 
+}
+.container .drop:hover {
+    border-radius: 50%;
+}
+
+/*
+.container .drop::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 90px;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.container .drop::after{
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}*/
