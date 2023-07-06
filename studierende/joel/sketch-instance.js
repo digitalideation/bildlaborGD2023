@@ -1,91 +1,102 @@
 var s1 = function (sketch, canvas) {
-
   let images = [];
-  let anzahlBilder = 19;
+  let anzahlBilder = 54;
   let farben = [];
   let placeholder = canvas;
+  let textbild;
 
   sketch.preload = function () {
-    for (let i = 1; i < anzahlBilder; i++) {
+    for (let i = 1; i <= anzahlBilder; i++) {
       images[i] = sketch.loadImage("Bilder/" + i + ".png");
-
     }
-
   }
 
-
   sketch.setup = function () {
-    var f4Width = 895;
-    var f4Height = 1280;
-    var factor=sketch.windowHeight / f4Height;
-    let canv = sketch.createCanvas(f4Width*factor, sketch.windowHeight);
+    var f4Width = 855;
+    var f4Height = 1240;
+    var factor = sketch.windowHeight / f4Height;
+    let canv = sketch.createCanvas(f4Width * factor, sketch.windowHeight);
     canv.parent(placeholder);
-    sketch.frameRate(1);
-    //sketch.noLoop();
+    sketch.frameRate(0.5);
     sketch.pixelDensity(1);
     sketch.rectMode(sketch.CENTER);
     sketch.imageMode(sketch.CENTER);
-    farben = ['rgb(255, 170, 0)', 'rgb(243, 255, 0)']
-
+    farben = ['rgb(5, 61, 140)', 'rgb(2,158,191)', 'rgb(216,121,6)', 'rgb(165,5,3)'];
   }
-
 
   sketch.draw = function () {
-    //sketch.background(255);
-    //let textContent = "Hallo, hier ist der Text!";
-    let x = sketch.width / 2;
-    sketch.blendMode(sketch.SOFT_LIGHT);
+    sketch.background(242);
+    sketch.blendMode(sketch.BLEND);
 
-    for (let i = 1; i < images.length; i++) {
-      let img = images[i];
-      let x = sketch.random(sketch.width);
-      let y = sketch.random(sketch.height);
-      let scalar = (0.1);
-      if (sketch.random(1) < 0.5) {
-        sketch.push();
-        sketch.translate(x, y);
-        sketch.scale(scalar);
-        //img.resize(1000, 0);
-        sketch.image(img, 0, 0);
-        sketch.pop();
-      } else {
-        let shapeType = sketch.random(['rect', 'ellipse', 'triangle', 'quad', 'line']);
-        let x = sketch.random(sketch.width);
-        let y = sketch.random(sketch.height);
-        let size = sketch.random(20, 100);
-        let wuerfel = sketch.int(sketch.random(farben.length));
-        let fillColor = farben[wuerfel];
-        sketch.fill(fillColor);
-        sketch.noStroke();
-        if (shapeType === 'rect') {
-          sketch.rect(x, y, size, size);
-        } else if (shapeType === 'ellipse') {
-          sketch.ellipse(x, y, size, size);
-        } else if (shapeType === 'triangle') {
-          let x2 = sketch.random(sketch.width);
-          let y2 = sketch.random(sketch.height);
-          let x3 = sketch.random(sketch.width);
-          let y3 = sketch.random(sketch.height);
-          sketch.triangle(x, y, x2, y2, x3, y3);
-        } else if (shapeType === 'quad') {
-          let x2 = sketch.random(sketch.width);
-          let y2 = sketch.random(sketch.height);
-          let x3 = sketch.random(sketch.width);
-          let y3 = sketch.random(sketch.height);
-          let x4 = sketch.random(sketch.width);
-          let y4 = sketch.random(sketch.height);
-          sketch.quad(x, y, x2, y2, x3, y3, x4, y4);
-        } else if (shapeType === 'line') {
-          let x2 = sketch.random(sketch.width);
-          let y2 = sketch.random(sketch.height);
-          sketch.line(x, y, x2, y2);
-        }
+    let numImages = sketch.random(3, 6);
+    let selectedImages = [];
 
-      }
+    for (let i = 0; i < numImages; i++) {
+      let imgIndex = sketch.floor(sketch.random(1, anzahlBilder));
+      selectedImages.push(images[imgIndex]);
     }
 
-  }
+    for (let i = 0; i < selectedImages.length; i++) {
+      let img = selectedImages[i];
+      let x = sketch.random(sketch.width);
+      let y = sketch.random(sketch.height);
+      let scalar = sketch.random(0.5, 0.8);
 
+      sketch.push();
+      sketch.translate(x, y);
+      sketch.scale(scalar);
+      sketch.blendMode(sketch.MULTIPLY);
+      sketch.image(img, 0, 0, img.width, img.height);
+      sketch.pop();
+    }
+
+    for (let i = 0; i < 10; i++) {
+      let shapeType = sketch.random(['triangle', 'scribble']);
+      let xPos = sketch.random(-200, sketch.width + 200);
+      let yPos = sketch.random(-200, sketch.height + 200);
+      let size = sketch.random(200, 400);
+      let fillColor = sketch.random(farben);
+      sketch.noFill();
+
+      sketch.push();
+      sketch.translate(xPos, yPos);
+      sketch.blendMode(sketch.DIFFERENCE);
+
+      if (shapeType === 'triangle') {
+        sketch.fill(fillColor);
+        sketch.noStroke();
+        sketch.beginShape();
+        for (let j = 0; j < 3; j++) {
+          let angle = sketch.random(sketch.TWO_PI);
+          let radius = size * 2; // Anpassen des Radius für größere Dreiecke
+          let x = radius * sketch.cos(angle);
+          let y = radius * sketch.sin(angle);
+          sketch.vertex(x, y);
+        }
+        sketch.endShape(sketch.CLOSE);
+      } else if (shapeType === 'scribble') {
+        let numPoints = sketch.random(4, 10);
+        let radius = size;
+        let strokeColor = sketch.random(farben);
+        let strokeWidth = 30;
+        sketch.stroke(strokeColor);
+        sketch.strokeWeight(strokeWidth);
+        sketch.strokeCap(sketch.SQUARE); // Abgeflachte Enden der Linien
+        sketch.noFill();
+        sketch.beginShape();
+        for (let j = 0; j < numPoints; j++) {
+          let angle = sketch.random(sketch.TWO_PI);
+          let distance = sketch.random(radius);
+          let x = distance * sketch.cos(angle);
+          let y = distance * sketch.sin(angle);
+          sketch.curveVertex(x, y);
+        }
+        sketch.endShape();
+      }
+
+      sketch.pop();
+    }
+  }
 }
 
 let p5One = new p5(s1, "sketch-one");

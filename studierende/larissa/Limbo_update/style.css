@@ -1,0 +1,72 @@
+        body {
+            @font-face {
+                font-family: 'Helvetica';
+                src: url('/fonts/helvetica.woff') format('woff');
+            }
+        }
+        
+        .menkman {
+            font-family: 'Helvetica';
+            font-weight: 100;
+            color: black;
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            /* Adjust the margin to fit your needs */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .menkman.second-line {
+            top: 1200px;
+            /* Adjust the top position as needed */
+        }
+        
+        .menkman.third-line {
+            top: 2000px;
+            /* Adjust the top position as needed */
+        }
+        
+        .menkman.forth-line {
+            top: 3600px;
+            /* Adjust the top position as needed */
+        }
+        
+        .menkman.fifth-line {
+            top: 4000px;
+            /* Adjust the top position as needed */
+        }
+        
+        h2 {
+            font-size: 800px;
+            line-height: 700px;
+            letter-spacing: 80px;
+            font-family: "KKL-Narrow";
+            color: rgb(0, 0, 0);
+            padding: 0px;
+            margin: 0px;
+            opacity: 0.7;
+            /* Adjust the opacity value */
+        }
+        
+        h4 {
+            background-color: black;
+            color: white;
+            padding: 0px;
+            margin: 0px;
+            opacity: 0.7;
+            /* Adjust the opacity value */
+            font-weight: 250;
+            letter-spacing: 0.5px;
+            flex: 1;
+            white-space: nowrap;
+        }
+        
+        .pixel {
+            background-color: black;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            opacity: 0.7;
+            /* Adjust the opacity value */
+        }

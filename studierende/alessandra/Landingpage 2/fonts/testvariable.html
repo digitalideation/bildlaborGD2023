@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="content">
+        <div id="letterwrapper" class="letter">unknown</div>
+    </div>
+
+    <script>
+    const el=document.getElementById("letterwrapper");
+
+    console.log("ganze hoehe"+document.documentElement.scrollHeight);
+    console.log("viewport hoehe"+document.documentElement.clientHeight);
+
+    const onePercent = (document.documentElement.scrollHeight - document.documentElement.clientHeight) / 100;
+
+    document.addEventListener("scroll", (event) => {
+    console.log(window.scrollY);
+  
+    let percentScrolled=Math.round(window.scrollY / onePercent) / 100;
+    //let wght=100+ (percentScrolled * 700);
+
+    let fontvariable=percentScrolled*700 + 100;
+    el.style.fontVariationSettings = "'wdth' 0, 'wght' "+fontvariable+", 'ital' 0"
+    
+  });
+
+    </script>
+</body>
+</html>

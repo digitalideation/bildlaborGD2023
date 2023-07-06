@@ -1,0 +1,151 @@
+body {
+  cursor: none;
+}
+
+* {
+  cursor: none !important;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: suisse;
+  font-weight: 400;
+  color: rgb(121, 121, 121);
+  font-size: 1.05rem;
+}
+
+h3 {
+  font-family: suisse mono;
+  font-size: 1rem;
+  color: rgb(121, 121, 121);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+.top-right-info {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+
+}
+
+.top-right-visual {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  z-index: 500;
+
+}
+
+.top-left {
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  width: 30%;
+  z-index: 100;
+}
+
+
+
+.blur-top {
+  position: fixed;
+  width: 100%;
+  height: 33%;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0.7357317927170868) 60%, rgba(0,0,0,0) 100%);
+  z-index: 10;
+}
+
+.blur-bottom {
+  position: fixed;
+  width: 100%;
+  height: 33%;
+  left: 0px;
+  bottom: 0px;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0.7357317927170868) 60%, rgba(0,0,0,0) 100%);
+}
+
+
+
+.hover-image {
+  width: 45%;
+  position: fixed;
+  top: 30%;
+  right: 3%;
+  /* transform: translate(-50%, -50%); */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 200;
+}
+
+
+.hover-text {
+  position: relative;
+  width: 40%;
+  padding-top: 1.5rem;
+}
+
+
+.container-info {
+  position: absolute;
+  width: 97%;
+  left: 3%;
+  top: 40%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  }
+
+
+.hover-image-content {
+  width: 100%; /* Adjust the size as desired */
+  height: auto; /* Adjust the size as desired */
+}
+
+.hover-text:hover + .hover-image,
+.hover-image:hover {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+a {
+  pointer-events: none;
+  cursor: none;
+}
+
+.fade-zitat {
+  transition: color 1s;
+  /* padding: 1.5rem; */
+}
+
+.fade-zitat:hover {
+  color: #64c813;
+}
+
+.fade-zitat:focus,
+.fade-zitat:active {
+  color: black;
+  transition: none;
+}
+
+
+.padding {
+  padding-bottom: 18rem;
+}
+
+
+#fading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+}

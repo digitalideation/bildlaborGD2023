@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <script src="sketch.js"></script>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+
+
+    <div id="textbox">
+
+        <p class="left america gross oben">Am I</p>
+        <p class="left america gross unten">(&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )?</p>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function playSound() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+
+    function pauseSound() {
+        var audio = document.getElementById("myAudio");
+        audio.pause();
+    }
+
+    function hideButton() {
+        var audio = document.getElementById("myAudio");
+        audio.classList.add("hidden");
+    }

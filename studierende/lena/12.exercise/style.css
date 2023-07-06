@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height of the viewport */
+  /*display: flex; /* Use flexbox for layout */
+  /*flex-direction: column; /* Stack child elements vertically */
+/* }
+
+#bild {
+  flex: 1; /* Take up 1 part of available space */
+  /*background: url('assets/handy1vers4.png') no-repeat center center/cover; 
+  /* The line above sets the background image and sizes it to cover the entire element */
+/* } */
+
+/*#text {
+  flex: 2; /* Take up 2 parts of available space */
+  /*overflow-y: auto; /* Make this section scrollable */
+ /* padding: 20px;
+  /* Add more styling as per your needs */
+/*} */ 

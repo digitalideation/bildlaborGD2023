@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Visual Voyager</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+  </head>
+  <body>
+
+ 
+
+
+<!--Titel-->
+    <div>
+      <div class="line-0 glitchText">
+      <h2>VOYAGE</h2>
+      </div>
+    </div>
+
+
+
+
+
+    <!--WaterDrop-->
+    <!-- BIG Image-->
+    <div class="containerONE container img-magnifier-container img-magnifier-glass">
+
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+      <div class="drop"></div>
+
+        <img src="assets/FL43.png" id="myImage" class="zoom" data-magnify-src="assets/FL43.png" 
+        width="100%" style="object-position: top center">
+
+  </div>
+      
+
+
+
+
+
+
+
+
+    <!--Klicking images-->
+    <div class="containerTWO container">
+        <img class="image cursor" src="assets/image1.png" onclick="changeImage(this)" alt="" style="object-position: top center"> 
+        <!--ZOOM Image-->  
+       <!--<img class="workspaceImg" src="assets/FL39A.png" alt="light ripples" width="25%" style="object-position: top center">-->
+    </div>
+
+
+
+
+
+
+
+
+
+  
+<!--Animated Typo-->
+<!--<div id="sketch-kkl-animated">-->
+ <div>
+ <video class="centerVideo" width="1280" autoplay loop muted>
+ <source src="assets/Aufnahme_N.mp4" type="video/mp4">
+ </video>
+
+ <img src="assets/Zeichenfläche 4T.png" class="backgroundScratch" style="object-position: top right;">
+
+  <video class="centerVideo" width="1280" autoplay loop muted>
+  <source src="assets/Aufnahme_O.mp4" type="video/mp4">
+  </video>
+
+  <video class="centerVideo" width="1280" autoplay loop muted>
+  <source src="assets/Aufnahme_M.mp4" type="video/mp4">
+  </video>
+
+  <video class="centerVideo" width="1280" autoplay loop muted>
+  <source src="assets/Aufnahme_A.mp4" type="video/mp4">
+  </video>
+
+  <video class="centerVideo" width="1280" autoplay loop muted>
+  <source src="assets/Aufnahme_D.mp4" type="video/mp4">
+  </video>
+</div>
+
+
+
+
+
+
+
+
+<!--Bildstrecke-->
+<div class="imageContainer">
+<img class="imageOne" src="assets/FL41.png">
+<img class="imageTwo" src="assets/FL32.png">
+<img class="imageThree" src="assets/FL33.png">
+<img class="imageFour" src="assets/FL36.png">
+<img class="imageFive center" src="assets/FL34.png">
+</div>
+
+
+
+
+
+
+
+
+  <!--Keywords-->
+  <div id="keywords">
+
+        <div class="line-1 glitchText">
+        <h2>UNKNOWN</h2>
+        </div>
+
+        <div class="line-2 glitchText">
+        <h2>NOISE</h2>
+        </div>
+
+        <div class="line-3 glitchText">
+        <h2>VOYAGE</h2>
+        </div>
+
+        <div class="line-4 glitchText">
+        <h2>NOMAD</h2>
+        </div>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h3>NOISE NOISE <br>
+          NOISE VOYAGE <br> 
+          NOISE NOMAD <br> 
+          UNKNOWN NOISE <br>
+          UNKNOWN NOMAD <br>
+          UNKNOWN VOYAGE <br> 
+          UNKNOWN NOMAD NOISE <br>
+          UNKNOWN NOISE NOMAD <br><br><br>
+          NO        MAD 
+        </h3>
+   
+         </div>
+
+         <section>
+          <div>
+            <h4>
+              NO MAD # MAD VOYAGE # NO MAD VOYAGE # NO VOYAGE # NO UN KNOWN VOYAGE # NO KNOWN VOYAGE # NO MAD UN KNOWN VOYAGE # NO MAD * MAD VOYAGE # NO MAD VOYAGE # NO VOYAGE # NO UN KNOWN VOYAGE # NO KNOWN VOYAGE # NO MAD UN KNOWN VOYAGE # NO MAD # MAD VOYAGE # NO MAD VOYAGE # NO VOYAGE # NO UN KNOWN VOYAGE # NO KNOWN VOYAGE # NO MAD UN KNOWN VOYAGE #
+            </h4>
+          </div>
+        </section>
+
+         
+
+        
+       
+         <div class="flex-container glitchText">
+          <div class="flex-containerOne">
+            <div><h3>NO</h3></div>
+            <div><h3>MAD</h3></div>
+          </div>
+
+        <div class="flex-container glitchText">
+          <div class="flex-containerOne">
+            <div><h3>MAD</h3></div>
+            <div><h3>VOYAGE</h3></div>
+          </div>
+        </div>
+
+        <div class="flex-container glitchText">
+          <div class="flex-containerOne">
+            <div><h3>NO</h3></div>
+            <div><h3>MAD</h3></div>
+            <div><h3>VOYAGE</h3></div>
+          </div>
+        </div>
+ 
+        <div class="flex-container glitchText">
+          <div class="flex-containerOne">
+            <div><h3>NO</h3></div>
+            <div><h3>VOYAGE</h3></div>
+          </div>
+        </div>
+
+        <div class="flex-container glitchText">
+          <div class="flex-containerOne">
+            <div><h3>NO</h3></div>
+            <div><h3>UN</h3></div>
+            <div><h3>KNOWN</h3></div>
+            <div><h3>VOYAGE</h3></div>
+          </div>
+        </div>
+
+        <div class="flex-container glitchText">
+          <div class="flex-containerOne">
+            <div><h3>NO</h3></div>
+            <div><h3>KNOWN</h3></div>
+            <div><h3>VOYAGE</h3></div>
+          </div>
+        </div>
+
+        <div class="flex-container glitchText">
+          <div class="flex-containerOne">
+            <div><h3>NO</h3></div>
+            <div><h3>MAD</h3></div>
+            <div><h3>UN</h3></div>
+            <div><h3>KNOWN</h3></div>
+            <div><h3>VOYAGE</h3></div>
+          </div>
+        </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--SplitScreen-->
+    <div class="imageContainerTwo">
+      <img class="imageSeven" src="assets/FL30.png">
+      <img class="imageSix" src="assets/FL23.png">
+    </div>
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+    <!--HauptTitel-->
+    <div>
+      <h5 class="glitchText">VISUAL VOYAGER</h5>
+    </div>
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+<!--Background / ZOOM / Line animation script-->
+<script src="js1.js"></script>
+<!--second script: NOMAD-->
+<!--<script src="js2.js"></script>-->
+<!--script changing images on cick-->
+<script src="js3.js"></script>
+<!--<script src="js4.js"></script>-->
+<script src="js5.js"></script>
+
+
+  </body>
+</html>
+
+
