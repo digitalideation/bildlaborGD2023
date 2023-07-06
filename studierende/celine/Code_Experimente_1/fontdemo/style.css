@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "GT-Flexa-Mono";
+    src: url("fonts/GT-Flexa-Mono-Trial-VF.woff2");
+}
+
+html {
+    background-color: rgb(41, 41, 41);
+}
+
+body {
+    min-height: 300vh;
+}
+
+.letter {
+    font-family: "GT-Flexa-Mono";
+    font-size: 8rem;
+    color: white;
+    /*weight: 100-800, italique: 0-100*/
+    /* font-variation-settings: "wdth" 0, "wght" 0, "ital" 100;
+    animation-name: letteranimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    top: 0px;
+}
+
+@keyframes letteranimation {
+    0% {
+        font-variation-settings: "wdth" 0, "wght" 0, "ital" 100;
+        color: blue;
+    }
+    50% {
+        font-variation-settings: "wdth" 800, "wght" 800, "ital" 100;
+        color: whitesmoke;
+    }
+    100% {
+        font-variation-settings: "wdth" 0, "wght" 0, "ital" 100;
+        color: blue;
+    }
+}
+
+@keyframes letteranimationital {
+    0% {
+        font-variation-settings: "wdth" 0, "wght" 0, "ital" 100;
+    }
+    50% {
+        font-variation-settings: "wdth" 800, "wght" 800, "ital" 0;
+    }
+    100% {
+        font-variation-settings: "wdth" 0, "wght" 0, "ital" 100;
+    }
+}
