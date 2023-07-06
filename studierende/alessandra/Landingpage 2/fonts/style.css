@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Gt-Flexa";
+    src: url("GT-Flexa-Mono-Trial-VF.woff2");
+  }
+
+  html, body {
+    height: 100%;
+   
+    
+  }
+
+  body {
+    margin: 0;
+    overflow: auto;
+  }
+  
+  canvas {
+    display: block;
+  }
+  
+  
+  body{
+   height: 300vh !important;
+  }
+  .letter{
+    font-family: "Gt-Flexa";
+    font-size: 8rem;
+    font-variation-settings: "wdth" 0, "wght" 800, "ital" 0;
+    /*animation-name: letteranimation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;*/
+  }
+  
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+  }
+  
+  @keyframes letteranimation {
+    0%{
+      font-variation-settings: "wdth" 0, "wght" 100, "ital" 0;
+    }
+    50%{
+      font-variation-settings: "wdth" 0, "wght" 800, "ital" 0;
+    }
+    100%{
+      font-variation-settings: "wdth" 0, "wght" 100, "ital" 0;
+    }
+  }
