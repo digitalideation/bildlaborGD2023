@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+#instruction {
+  word-spacing: 130px;
+  text-align: left;
+  position: fixed;
+  top: 0px;
+  bottom: 15px;
+  left: 15px;
+  font-size: 100px;
+  z-index: 0;
+}
+
+
+

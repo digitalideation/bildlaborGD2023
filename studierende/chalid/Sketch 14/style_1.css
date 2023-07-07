@@ -1,0 +1,62 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  color: #000; /*black typo*/
+  background-color: #f4f4f4; /*white background*/
+  transition: background-color 1s ease;
+}
+
+
+h1{
+  font-size: 3em;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+
+.panel{
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+
+
+
+/*background colors*/
+.color-yellow{
+  background: yellow;
+}
+
+.color-blue{
+  background: rgb(53, 53, 214);
+}
+
+.color-red{
+  background: red;
+}
+
+.color-green{
+  background: green;
+}
+
+.color-purple{
+  background: purple;
+}
+
+.color-pink{
+  background: pink;
+}
+
+
+body{
+  text-align: center;
+  font-size: 120%;
+  line-height: 1.618;
+}

@@ -5,7 +5,10 @@ var images = [
     "assets/image1.png",
     "assets/image2.png",
     "assets/image3.png",
-    "assets/image4.png"
+    "assets/image4.png",
+    "assets/image5.png",
+    "assets/image6.png",
+    "assets/image7.png"
 ];
 
 function changeImage(element) {
@@ -30,6 +33,12 @@ function changeImage(element) {
         element.src = nextSrc;
     }
 }
+
+
+
+
+
+
 
 
 

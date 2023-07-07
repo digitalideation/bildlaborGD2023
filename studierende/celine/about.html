@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Generative Quality of Noise</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="libraries/p5.gui.js"></script>
+    <script src="libraries/quicksettings.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <!-- <div><button id="prozess"><a href="prozess.html">Prozess</a></button></div> -->
+        <!-- <a href="prozess.html">
+            <button>HTML</button>
+        </a> -->
+        <!-- <div class="button_container">
+            <div><button id="about" onclick="myFunction();handleClick()"><a href="index.html">Generieren</a></button></div>
+
+        </div> -->
+
+        <div class="button_container">
+            <div><button id="prozess"><a href="index.html">Generieren</a></button></div>
+            <div><button id="about"><a href="prozess.html">Prozess</a></button></div>
+        </div>
+
+    </nav>
+
+    <!-- <div class="buttons">
+        <button name="submit" class="action_btn submit" type="submit" value="Save" onclick="myFunction()">Save</button>
+        <button name="submit" class="action_btn cancel" type="submit" value="Cancel" onclick="myFunction2()">Cancel</button>
+        <p id="saved"></p>
+    </div> -->
+
+
+
+
+
+    <!-- <img id="titel_bild" src="assets/Bildschirmfoto 2023-06-28 um 16.07.46.png"> -->
+    <script src="javascript.js"></script>
+
+
+
+
+    <div class="wrapper">
+
+        <section class="one" id="section_1">
+            <div class="content">
+                <div class="right-container" id="first_container">
+                    <div class="flex_container">
+
+                        <div class="spalte" id="text_1">
+                            <p><span class="bold">Schwarze oder weisse Quadrate, Linien und Punkte formen sich zu Bildern. Es wird kein Endergebnis generiert, lediglich unterschiedliche Zustände derselben Information. Die Linien und Punkte, welche sich in der Übersetzung des Ausgangsbildes abzeichnen, sind «noise artifacts». Weshalb entstehen diese Artefakte? Was verstehe ich unter dem Begriff «noise artifacts» und welche Informationen liefern sie uns? </span>                                </p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div class="right-container">
+                    <div class="align-right">
+                        <h2>«Noise can also stand for <span class="highlight">a disturbance, break or addition</span> within the signal of useful data.»<br><span class="gray">Glitch Studies Manifesto, Rosa Menkman</span></h2>
+                    </div>
+
+                </div> -->
+
+
+
+            </div>
+            <div class="arrow_container">
+                <div class="arrow_item">
+                    <a href="#section_2">
+
+                        <h2 style="margin: 0px;" class="arrow_text">Scrollen</h2>
+
+                    </a>
+                </div>
+                <div class="arrow_item">
+                    <a href="#section_2"> <i class="arrow down arrow_text"></i></a>
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+        <section class="two" id="section_2">
+            <div class="content">
+                <div class="right-container">
+                    <div class="flex_container">
+
+                        <div class="spalte">
+                            <p><span class="bold">Weshalb entstehen die Artefakte?</span><br>Die Linien und Punkte entstehen aufgrund <a href="prozess.html" class="a_text">mehrfacher Ver- und Entschlüsselung</a>von Information. In der Übersetzung tritt ein
+                                Fehler auf, welcher sich in unerwarteten Bildbestandteilen äussert. Die darunterliegenden Informationen werden gezeigt, jedoch mit einer leichten Verfremdung aufgrund des Übersetzungsfehlers.
+
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="align-right">
+                        <h2>«There are three occasions in which the static, linear notion of transmitting information can be <img src="assets/interrupted_freigestellt_2.png" class="text_image_2">. I use these instances to exploit noise artifacts, that I sub-divide
+                            as glitch, encoding/decoding (of which compression is the most ordinary form) and feedback artifacts.»<br><span class="gray">Glitch Studies Manifesto, Rosa Menkman</span></h2>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="arrow_container">
+                <div class="arrow_item">
+                    <a href="#section_3">
+
+                        <h2 style="margin: 0px;" class="arrow_text">Scrollen</h2>
+
+                    </a>
+                </div>
+                <div class="arrow_item">
+                    <a href="#section_3"> <i class="arrow down arrow_text"></i></a>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+        <section class="two" id="section_3">
+            <div class="content">
+                <div class="right-container">
+                    <div class="flex_container">
+
+                        <div class="spalte">
+                            <p><span class="bold">Was verstehe ich unter dem Begriff «noise artifacts»?</span><br>Technisch (oder menschlich) bedingte Signalfluktuationen sind als Rauschen in jedem Medium präsent. Rauschen nehmen wir als anhaltendes, dumpfes
+                                Geräusch war. Aufgrund dessen Gleichmässigkeit können wir dem Geräusch nicht viele Informationen entnehmen. Diese Abweichungen im Signal können jedoch zur Missinterpretation von Information und somit einem Übersetzungsfehler
+                                führen. Spricht man in diesem Zusammenhang von Artefakten, zeichnet sich das Rauschen in der Informationswiedergabe als «noise artifacts» ab und wird sichtbar.
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-container">
+                    <div class="align-right">
+                        <h2>«Noise thus exists as a paradox; while it is often negatively defined, it is also a positive, <img src="assets/generative_quality_freigestellt.png" class="text_image_3"> (that is present in any communication medium).»<br>
+                            <span
+                                class="gray">Glitch Studies Manifesto, Rosa Menkman</span>
+                        </h2>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="arrow_container">
+                <div class="arrow_item">
+                    <a href="#section_4">
+
+                        <h2 style="margin: 0px;" class="arrow_text">Scrollen</h2>
+
+                    </a>
+                </div>
+                <div class="arrow_item">
+                    <a href="#section_4"> <i class="arrow down arrow_text"></i></a>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+
+        <section class="three" id="section_4">
+            <div class="content">
+                <div class="right-container">
+                    <div class="flex_container">
+
+                        <div class="spalte">
+                            <p><span class="bold">Welche Informationen liefern uns die Artefakte?</span><br>Die «noise artifacts» scheinen Informationen des Ausgangsbildes zu verhüllen. Trotzdem liefert uns das Existieren des Rauschens Information. Im Wind
+                                rauschende Blätter oder das Rauschen des Meeres gibt uns keine Information über einzelne Bäume oder Wellen – dafür aber über den Wind. Gleichsam birgt Bildrauschen keine Bildinformationen. Das Rauschen wird jedoch selbst
+                                zum Informationsträger im Zusammenhang mit dem Medium. Durch die <a href="index.html" class=a_text>generative Qualität des Bildrauschens</a> werden versteckte, dem Medium darunterliegende Strukturen erfahrbar gemacht.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right_container">
+                    <div class="align-right">
+                        <h2>«The dominant, continuing search for a<img src="assets/noiseless_channel_freigestellt.png" class="text_image"> has been, and will always be no more than a regrettable, ill-fated dogma.» <br><span class="gray">Glitch Studies Manifesto, Rosa Menkman </span></h2>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="arrow_container">
+                <div class="arrow_item">
+                    <a href="#section_1"> <i class="arrow arrow-top arrow_text"></i></a>
+                </div>
+                <div class="arrow_item">
+                    <a href="#section_1">
+
+                        <h2 style="margin: 0px;" class="arrow_text_letzter">Nach Oben</h2>
+
+                    </a>
+                </div>
+
+
+
+            </div>
+
+
+        </section>
+    </div>
+
+
+</body>
+
+</html>
