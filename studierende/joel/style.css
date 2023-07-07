@@ -1,0 +1,30 @@
+html, body {
+  margin: 10;
+  padding: 40;
+  display:flex;
+}
+
+canvas {
+  display: block;
+}
+
+.poster {
+  padding: 1rem;
+}
+
+#gallery-page {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #000; /* Schriftfarbe auf schwarz geändert */
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+#gallery-page:hover {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none; /* Unterstreichung entfernt */
+}
+
