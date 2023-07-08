@@ -4,7 +4,7 @@
   //Web APi//
 var audioContext = new (window.AudioContext || window.webkitAudioContext)();
 var analyser = audioContext.createAnalyser();
-var audio = new Audio("/voice.mp3");
+var audio = new Audio("voice.mp3");
 analyser.fftSize = 256;
 
 

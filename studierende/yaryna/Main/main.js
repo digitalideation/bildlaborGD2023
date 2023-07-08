@@ -43,7 +43,7 @@ function setup() {
   pixelDensity(1);
   externalColor = color(100, 100, 100);
   internalColor = color(20, 255, 0);
-  sound.loop();
+  
 
 }
 
@@ -67,6 +67,7 @@ function draw() {
       set(x2, y2, pixelColor);
       updatePixels();
     }
+   sound.loop();
   }
 
 
