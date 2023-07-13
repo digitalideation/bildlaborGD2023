@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'KKL-Narrow';
-    src: url('/fonts/KKL-Narrow.woff2') format('woff2'), url('/fonts/KKL-Narrow.woff') format('woff');
+    src: url('fonts/KKL-Narrow.woff2') format('woff2'), url('fonts/KKL-Narrow.woff') format('woff');
     font-weight: bold;
 }
 
 body {
-    cursor: url('/assets/square.png'), pointer;
+    cursor: url('assets/square.png'), pointer;
     margin: 0;
     padding: 0;
     overflow-x: hidden;

@@ -24,9 +24,9 @@ function fbm(p) {
 }
 
 function preload() {
-    myImg0 = loadImage("/assets/scans_b_final_5.jpg");
-    imgShader = loadShader("/shader.vert", "/shader.frag");
-    myImg2 = loadImage("/assets/scans_b_final_4.jpg");
+    myImg0 = loadImage("assets/scans_b_final_5.jpg");
+    imgShader = loadShader("shader.vert", "shader.frag");
+    myImg2 = loadImage("assets/scans_b_final_4.jpg");
 }
 
 function setup() {
@@ -36,9 +36,9 @@ function setup() {
     noStroke();
 
     // Load the image and shader
-    myImg0 = loadImage("/assets/scans_b_final_5.jpg");
-    imgShader = loadShader("/shader.vert", "/shader.frag", startDrawing);
-    myImg2 = loadImage("/assets/scans_b_final_4.jpg");
+    myImg0 = loadImage("assets/scans_b_final_5.jpg");
+    imgShader = loadShader("shader.vert", "shader.frag", startDrawing);
+    myImg2 = loadImage("assets/scans_b_final_4.jpg");
 }
 
 function startDrawing() {
