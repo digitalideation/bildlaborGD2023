@@ -65,10 +65,10 @@ function draw() {
 
     //hat das hsb hier einen einfluss auf einsatz der rgb-werte im setup?
     colorMode(HSB);
-    farbe_1 = map(mouseX, 0, width, 0, 360);
+    farbe_1 = map(mouseX, 0, width, 0, 255);
     fill(farbe_1, 100, 100);
     //square(50, 50, 50);
-    farbe_2 = map(mouseY, 0, height, 0, 360);
+    farbe_2 = map(mouseY, 0, height, 0, 255);
     fill(farbe_2, 100, 100);
     //square(100, 100, 50);
 
@@ -94,6 +94,7 @@ function keyPressed() {
 }
 
 function pixelImage() {
+
     bild_1.loadPixels();
     //pixelation und graustufen
     //alle pixel durchgehen; in schritten so gross wie das pixelations-level
@@ -110,11 +111,12 @@ function pixelImage() {
             let b = bild_1.pixels[i + 2];
             let a = bild_1.pixels[i + 3];
 
-            let durchschnitts_farbe = (r + g + b) / 3;
+            let durchschnitts_farbe = (r + g + b) / 3; //560 / 3 -> 193.33
 
 
             let myColor = lerpColor(color(farbe_1, 100, 100, 0.8), color(farbe_2, 100, 100, 0.8), durchschnitts_farbe / 255);
 
+            
 
             //ein quadrat erstellen in der grösse des pixelations-level für pixelatins-effekt des bildes
             //fill(durchschnitts_farbe, durchschnitts_farbe, durchschnitts_farbe, a);

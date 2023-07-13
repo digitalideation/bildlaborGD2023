@@ -8,7 +8,7 @@ let skalierung = 3;
 let edgeImage;
 
 function preload() {
-    img = loadImage("assets/strand.png");
+    img = loadImage("assets/img/strand.png");
 }
 
 function setup() {
