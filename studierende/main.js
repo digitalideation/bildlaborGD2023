@@ -1,5 +1,5 @@
 const image = new Image();
-image.src = '/scan0016.jpg';
+image.src = 'scan0016.jpg';
 image.addEventListener('load', function(){
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
